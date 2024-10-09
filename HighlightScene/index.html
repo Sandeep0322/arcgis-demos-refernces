@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Highlight Scene Layer - 4.5</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.5/esri/css/main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script>
+        var locationPath = location.pathname.replace(/\/[^\/]+$/, "");
+        window.dojoConfig = {
+            packages: [{
+                name: "app",
+                location: locationPath + "/app"
+            }]
+        }
+    </script>
+    <script src="https://js.arcgis.com/4.5"></script>
+</head>
+
+<body>
+    <div class="panel-side">
+        <h2>Office rooms</h2>
+        <ul id="roomsList">
+            <li>Loading&hellip;</li>
+        </ul>
+    </div>
+    <div id="viewDiv"></div>
+    <script>
+        require(["app/main"]);
+    </script>
+</body>
+
+</html>
